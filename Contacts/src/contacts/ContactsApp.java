@@ -41,6 +41,8 @@ public class ContactsApp extends Application {
         contactListView.setPadding(new Insets(5,5,5,5));
         contactListView.setItems(contactNames);
         
+   
+        
         VBox commandPane = new VBox();
         Button viewContactButton = new Button("View Contact Details");
         viewContactButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -49,7 +51,7 @@ public class ContactsApp extends Application {
                 Contact selectedContact = contacts.get(contactListView.getSelectionModel().getSelectedIndex());
                 
                 Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle(selectedContact.getFirstName() + "'s Contact Details");
+                alert.setTitle(selectedContact.getFirstName()+ "'s Contact Details");
                 alert.setHeaderText(null);
                 alert.setContentText(selectedContact.toString());
                 
